@@ -65,33 +65,48 @@ x
         crossorigin="anonymous"></script>
 
     <script>
-        function (){
-    let name=$(#'order_name').val();
-    let name=$(#'order_count').val();
-    let name=$(#'order_address').val();
-    let name=$(#'order_phone').val();
-    if (name==''){alert('이름을 입력하세요')$('#order_name').focus() return }
-    else if (count==''){alert('수량을 입력하세요')$('#order_count').focus() return }
-     else if (address==''){alert('주소를 입력하세요')$('#order_address').focus() return }
-     else if (phone==''){alert('휴대폰번호를 입력하세요')$('#order_phone').focus() return }
-     else if(PhoneNumbber){alert('휴대폰 형식이 틀립니다.\n 010-0000-0000으로 입력해주세요.')return}
-     #.$.ajax({
-         type: "POST",
-         url: "/order",
-         data: {name_give: name, count_give:count,address_give:address,phone_give:phone},
-        
-        success: function (response) {if(response)[result=='success']{alert('주문완료')}
-        window.location.reload();
-             
-         }}
-     })
-
-    
+      
     
     
     
 
     
+
+      function order() {
+
+let name = $('#order_name').val();
+
+let count = $('#order_count').val();
+
+let address = $('#order_address').val();
+
+let phonenum = $('#order_phonenum').val();
+
+if (name == '') {
+
+    alert('이름을 입력해주세요');
+
+    $('#order_name').focus();
+
+} else if (count == '----수량을 선택하세요----') {
+
+    alert('수량을 입력해주세요');
+
+    $('#order_count').focus();
+
+} else if (address == '') {
+
+    alert('주소를 입력해주세요');
+
+    $('#order_address').focus();
+
+} else if (phonenum == '') {
+
+    alert('전화번호를 입력해주세요');
+
+    $('#order_phone').focus();
+
+}
 
 }
 
